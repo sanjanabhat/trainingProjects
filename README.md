@@ -37,7 +37,7 @@ Generics
 
 Passing and retrieving values through generics
 
-Interface
+Interface Example
 
 An example of using comparable interface
 
