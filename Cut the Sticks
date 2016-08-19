@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        int stickNumber;
+        Scanner scan=new Scanner(System.in);
+        stickNumber=scan.nextInt();
+        if(!(stickNumber>=1 && stickNumber<=1000)) return;
+        ArrayList<Integer> stickLength=new ArrayList<Integer>();
+        for(int i=0;i<stickNumber;i++){
+            int length=scan.nextInt();
+            if(!(length>=1 && length<=1000)) return;
+            stickLength.add(length);
+            
+        }
+        
+         while(stickLength.size()!=0){
+                System.out.println(stickLength.size());
+                int min=Collections.min(stickLength);
+             // System.out.println(min);
+                for(int i=0;i<stickLength.size();i++){
+                    stickLength.set(i,stickLength.get(i)-min);
+                }
+                stickLength.removeAll(Arrays.asList(0));
+	}
+    }
+}      
