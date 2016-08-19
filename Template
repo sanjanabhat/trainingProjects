@@ -1,0 +1,14 @@
+public class training<T> {
+	T ob;
+	training(T x){
+		ob=x;
+		
+	}
+	Object getObject(){
+		return ob;
+	}
+	void showType(){
+		System.out.println("Type "+ob.getClass().getName());
+	}
+	
+}
