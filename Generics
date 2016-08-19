@@ -1,0 +1,18 @@
+public class training {
+	Object ob;
+	training(Object x){
+		ob=x;
+		
+	}
+	Object getObject(){
+		return ob;
+	}
+	void showType(){
+		System.out.println("Type "+ob.getClass().getName());
+	}
+	 public static void main(String[] args) {
+	        /* Enter your code here. Read input from STDIN. Print output to STDOUT. */
+		training t=new training(8);
+		t.showType();
+	    }
+}
