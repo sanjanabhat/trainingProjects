@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan=new Scanner(System.in);
+        int numberOfTestCase=scan.nextInt();
+        int studentCount;
+        int threshold;
+        int[] arrivalTimes;
+        for(int i=0;i<numberOfTestCase;i++){
+            int count=0;
+            studentCount=scan.nextInt();
+            threshold=scan.nextInt();
+            arrivalTimes=new int[studentCount];
+            for(int j=0;j<studentCount;j++){
+                arrivalTimes[j]=scan.nextInt();
+                if(arrivalTimes[j]<=0)
+                    count++;
+                
+            }
+            if(count>=threshold){
+                System.out.println("NO");
+               
+            }
+            else{
+                System.out.println("YES");
+            }
+            
+        }
+        
+        
+        
+    }
+}
