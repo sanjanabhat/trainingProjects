@@ -1,0 +1,60 @@
+package training;
+import java.util.*;
+
+public class training {
+public static void main(String[] args){
+	
+	Scanner scan =new Scanner(System.in);
+	
+	String expression=scan.nextLine();
+	char[] charArray=expression.toCharArray();
+	
+	evaluatePostfixExpression(charArray);
+}
+	
+	
+
+public static boolean isOperand(char ch){
+	
+	if(ch>='0'&&ch<='9'){
+		return true;
+	}
+		else{
+			return false;
+	}
+}
+	
+public static int perform(int leftOperand,int rightOperand,char operator){
+	
+	switch(operator){
+		case '+':return (leftOperand+rightOperand);
+		case '-':return (leftOperand-rightOperand);
+		case '*':return (leftOperand*rightOperand);
+		case '/':return (leftOperand/rightOperand);
+		default: return 0;
+	
+	}
+}
+public static void evaluatePostfixExpression(char[] charArray){
+	
+	Stack <Character> stackOperands=new Stack<Character>();
+	
+	for(char ch:charArray){
+		if(isOperand(ch)){
+			stackOperands.push(ch);
+		}
+		else {
+			int rightOperand=Character.getNumericValue(stackOperands.pop());
+			int leftOperand=Character.getNumericValue(stackOperands.pop());
+			int result=perform(leftOperand,rightOperand,ch);
+			char pushResult=(char)('0'+result);
+			stackOperands.push(pushResult);
+			
+			}
+		
+	}
+	
+	int finalResult=Character.getNumericValue(stackOperands.pop());
+	System.out.println(finalResult);
+}
+}
