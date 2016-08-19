@@ -1,0 +1,31 @@
+package training;
+import java.io.*;
+import java.util.*;
+
+public class training implements Comparable {
+	int regno;
+	String name;
+	training(int regno,String name){
+		this.regno=regno;
+		this.name=name;
+
+	}
+	public int compareTo(Object o){
+		return this.name.compareTo(((training)o).name);
+	}
+	public String toString(){
+		return regno+" "+name;
+	}
+	
+}
+package training;
+import java.util.*;
+public class Stack{
+	 public static void main(String[] args) {
+	        /* Enter your code here. Read input from STDIN. Print output to STDOUT. */
+		training student1=new training(1,"Sanjana");
+		training student2=new training(2,"Vibha");
+		System.out.println(student1.compareTo(student2));
+		
+	    }
+}
