@@ -35,7 +35,7 @@ Note: For each cut operation, you have to recalcuate the length of smallest stic
 
 Generics
 
-Passing and retrieving values through generics
+Passing and retrieving values through non generic method
 
 Interface Example
 
