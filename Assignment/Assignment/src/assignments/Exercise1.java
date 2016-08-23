@@ -94,7 +94,7 @@ public class Exercise1 {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 		
-			System.out.println("");
+			System.out.println("Wrong file entered");
 			
 			}
 	}
