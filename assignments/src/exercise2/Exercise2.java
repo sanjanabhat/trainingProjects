@@ -23,7 +23,7 @@ public class Exercise2 extends Exercise {
 		choiceOfBase = scan.nextInt();
 		System.out.println("Enter 1-->addition, 2-->subtraction");
 		choiceOfOperation = scan.nextInt();
-		if (choiceOfOperation != 1 || choiceOfOperation != 2) {
+		if (choiceOfOperation != 1 && choiceOfOperation != 2) {
 			System.out.println("Wrong choice of operation");
 			return;
 		}
@@ -31,7 +31,7 @@ public class Exercise2 extends Exercise {
 
 		left = scan.next();
 		right = scan.next();
-		System.out.println(left + " " + right);
+	
 
 	}
 
@@ -39,7 +39,7 @@ public class Exercise2 extends Exercise {
 	@Override
 	public void execute() {
 
-		if (choiceOfOperation != 1 || choiceOfOperation != 2) {
+		if (choiceOfOperation != 1 && choiceOfOperation != 2) {
 
 			return;
 		}
@@ -49,7 +49,7 @@ public class Exercise2 extends Exercise {
 			BinaryAdder binAdder = new BinaryAdder();
 			if (choiceOfOperation == 1) {
 				result = binAdder.add(left, right, 2);
-				System.out.println("hi");
+			
 
 			} else {
 				result = binAdder.sub(left, right, 2);
