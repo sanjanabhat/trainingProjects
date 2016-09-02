@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyViewController">
+            <connections>
+                <outlet property="clickButton" destination="4Ji-G3-C0D" id="4jZ-Xf-tqv"/>
+                <outlet property="scoreLabel" destination="dID-dw-Txu" id="HlX-aT-bzO"/>
+                <outlet property="timerLabel" destination="IOe-Oi-EvF" id="6jm-3P-N3f"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ji-G3-C0D">
+                    <rect key="frame" x="138" y="155" width="325" height="265"/>
+                    <state key="normal" image="button_tap_deselected.png"/>
+                    <state key="highlighted" image="button_tap_selected.png"/>
+                    <connections>
+                        <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="izQ-cH-PZA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dID-dw-Txu">
+                    <rect key="frame" x="194" y="423" width="201" height="71"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOe-Oi-EvF">
+                    <rect key="frame" x="222" y="49" width="144" height="76"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0079327286694427287" green="0.0080611711748569161" blue="0.0084464986910994799" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.99270476587735845" green="1" blue="0.29519450698967309" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="4Ji-G3-C0D" firstAttribute="top" secondItem="IOe-Oi-EvF" secondAttribute="bottom" constant="37" id="3S0-2x-1L3"/>
+                <constraint firstItem="4Ji-G3-C0D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FMp-Fv-Fpe"/>
+                <constraint firstItem="IOe-Oi-EvF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GCi-LU-kB8"/>
+                <constraint firstItem="dID-dw-Txu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="W2f-CN-rZj"/>
+                <constraint firstItem="dID-dw-Txu" firstAttribute="top" secondItem="4Ji-G3-C0D" secondAttribute="bottom" constant="83" id="bht-Co-jwb"/>
+                <constraint firstItem="4Ji-G3-C0D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lpU-7K-a1f"/>
+            </constraints>
+            <point key="canvasLocation" x="352" y="220"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_tap_deselected.png" width="250" height="265"/>
+        <image name="button_tap_selected.png" width="250" height="265"/>
+    </resources>
+</document>
